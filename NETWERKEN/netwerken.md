@@ -176,12 +176,12 @@ public class Client {
             clientSocket = new Socket(serverAddress, portNumber);
             System.out.println("Verbonden met de server!");
 
-            // ObjectOutputStream voor verzenden van objecten naar server
-            ObjectOutputStream out = new ObjectOutputStream(clientSocket.getOutputStream());
+            // OutputStream voor verzenden van objecten naar server
+            OutputStream out = clientSocket.getOutputStream()
             out.flush();
 
-            // ObjectInputStream voor ontvangen van objecten van server
-            ObjectInputStream in = new ObjectInputStream(clientSocket.getInputStream());
+            // InputStream voor ontvangen van objecten van server
+            InputStream in = new clientSocket.getInputStream();
 
             // Stap 3: communicatie met de server
             try {
