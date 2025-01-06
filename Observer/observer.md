@@ -10,11 +10,11 @@ Je hebt een weerstation. Je wilt dat de temperatuur, luchtvochtigheid en luchtdr
 
 ### Oplossing - Algemeen
 
-1. Maak een Subject/Observable interface met volgende methodes:
+1. Maak een Subject interface met volgende methodes:
    - addObserver(Observer o)
    - removeObserver(Observer o)
    - notifyObservers()
-2. Maak een concrete klasse die de Subject/Observable interface implementeert.
+2. Maak een concrete klasse die de Subject interface implementeert.
    - bijvoorbeeld: klasse WeatherData
 3. Maak een Observer interface met volgende methode:
    - update()

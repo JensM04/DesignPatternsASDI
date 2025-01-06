@@ -10,13 +10,16 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
 
 ### Oplossing - Algemeen
 
-1. Maak je hoofdklasse (component) met bepaalde methodes en variabelen.
-2. Maak een abstracte decorator klasse die de hoofdklasse extend.
-3. Maak een/meerdere concrete decorator klasse die de abstracte decorator klasse extend.
-4. Maak een concreet object van de hoofdklasse (concrete component).
-5. Maak een concreet object van de abstracte decorator klasse (concrete decorator) en geef het concreet object van de hoofdklasse mee als parameter.
+1. Definieer de interface die door het basisonderdeel en decoratoren wordt geïmplementeerd.
+2. Maak een abstracte decoratorklasse die verzoeken doorstuurt naar de basisklasse.
+3. Implementeer de basisklasse met standaardfunctionaliteit.
+4. Voeg specifieke decoratoren toe om extra functionaliteit te implementeren.
 
    ![Decorator](Decorator.png)
+
+   ## concreet voorbeeld:
+
+   ![alt text](image.png)
 
 ### Voorbeeld Vervolg
 
@@ -51,60 +54,6 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
    ```
 
 3. ```java
-   public class Milk extends CondimentDecorator {
-         public Milk(Beverage beverage) {
-               super(beverage);
-         }
-
-         @Override
-         public String getDescription() {
-               return getBeverage().getDescription() + ", Milk";
-         }
-
-         @Override
-         public double cost() {
-               return getBeverage().cost() + 0.10;
-         }
-   }
-   ```
-
-   ```java
-   public class Sugar extends CondimentDecorator {
-         public Sugar(Beverage beverage) {
-               super(beverage);
-         }
-
-         @Override
-         public String getDescription() {
-               return getBeverage().getDescription() + ", Sugar";
-         }
-
-         @Override
-         public double cost() {
-               return getBeverage().cost() + 0.05;
-         }
-   }
-   ```
-
-   ```java
-   public class Whip extends CondimentDecorator {
-         public Whip(Beverage beverage) {
-               super(beverage);
-         }
-
-         @Override
-         public String getDescription() {
-               return getBeverage().getDescription() + ", Whip";
-         }
-
-         @Override
-         public double cost() {
-               return getBeverage().cost() + 0.15;
-         }
-   }
-   ```
-
-4. ```java
    public class Espresso extends Beverage {
          public Espresso() {
                super();
@@ -160,7 +109,61 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
    }
    ```
 
-5. ```java
+   3. ```java
+      public class Milk extends CondimentDecorator {
+            public Milk(Beverage beverage) {
+                  super(beverage);
+            }
+
+            @Override
+            public String getDescription() {
+                  return getBeverage().getDescription() + ", Milk";
+            }
+
+            @Override
+            public double cost() {
+                  return getBeverage().cost() + 0.10;
+            }
+      }
+      ```
+
+   ```java
+   public class Sugar extends CondimentDecorator {
+         public Sugar(Beverage beverage) {
+               super(beverage);
+         }
+
+         @Override
+         public String getDescription() {
+               return getBeverage().getDescription() + ", Sugar";
+         }
+
+         @Override
+         public double cost() {
+               return getBeverage().cost() + 0.05;
+         }
+   }
+   ```
+
+   ```java
+   public class Whip extends CondimentDecorator {
+         public Whip(Beverage beverage) {
+               super(beverage);
+         }
+
+         @Override
+         public String getDescription() {
+               return getBeverage().getDescription() + ", Whip";
+         }
+
+         @Override
+         public double cost() {
+               return getBeverage().cost() + 0.15;
+         }
+   }
+   ```
+
+4. ```java
    public class StarbuzzCoffee {
          public static void main(String[] args) {
                Beverage beverage = new Espresso();

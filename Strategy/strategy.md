@@ -18,7 +18,17 @@ We hebben een class Duck die een methode quack en fly heeft. Maar er kunnen ook 
 
    ![Strategy](Strategy.png)
 
-### Voorbeeld Vervolg - Enkel vliegen
+### Voorbeeld EENDEN - Enkel vliegen
+
+WE VOLGEN DE STAPPEN ZOALS HIERBOVEN:
+
+1. We maken een interface FlyBehavior
+2. We maken een klasse die het gedrag implementeerd FlyNoWay bijvoordbeeld
+3. We maken een klasse Duck die het gedrag implementeerd
+4.
+5. Subklasse maken die het gedrag implementeren: in dit geval decoyduck of rubberduck of ...
+
+   ![Strategy](StrategyDucks.png)
 
 > stappen komen overeen met de stappen in de algemene oplossing
 
@@ -88,7 +98,5 @@ We hebben een class Duck die een methode quack en fly heeft. Maar er kunnen ook 
           }
     }
    ```
-
-   ![Strategy](StrategyDucks.png)
 
 # [TERUG NAAR INHOUDSOPGAVE](../README.md)

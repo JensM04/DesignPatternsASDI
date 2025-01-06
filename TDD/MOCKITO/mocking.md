@@ -107,3 +107,5 @@ public voidlege_spaties_nullCode(String landCode) {
     //We verwachten dat de methode findOppervlakteAlleLanden niet werd opgeroepen
     Mockito.verify(persistentieControllerDummy, Mockito.times(0)).findOppervlakteAlleLanden()
 ```
+
+## OEFENINGEN
