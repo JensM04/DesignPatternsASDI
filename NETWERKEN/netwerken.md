@@ -216,4 +216,4 @@ public class Client {
 
 ```
 
-## tip: enige verschil met server en client is: bij client gebruik je ClientSocket en heb je geen while(true)
+## tip: enige verschil met server en client is: bij client gebruik je ClientSocket en heb je geen while(true), en we moeten geen server closen
