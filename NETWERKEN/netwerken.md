@@ -103,6 +103,8 @@ public class Client {
 }
 ```
 
+![alt text](image.png)
+
 ## VOORBEELD: ONTVANGEN CLIENTMESSAGE + SERVER GEEFT RESPONSE TERUG
 
 ```java
